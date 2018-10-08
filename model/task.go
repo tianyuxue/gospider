@@ -1,12 +1,16 @@
 package model
 
-type Stack []string
+import "net/url"
 
-func (s *Stack) Push(v string) {
+var Tasks = Stack{}
+
+type Stack []*url.URL
+
+func (s *Stack) Push(v *url.URL) {
 	*s = append(*s, v)
 }
 
-func (s *Stack) Pop() string {
+func (s *Stack) Pop() *url.URL {
 	ret := (*s)[len(*s)-1]
 	*s = (*s)[0:len(*s)-1]
 	return ret
