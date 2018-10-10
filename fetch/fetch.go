@@ -11,5 +11,5 @@ func Fetch(addr *url.URL) {
 	if err != nil {
 		panic(err)
 	}
-	persist.Persisit(response, addr)
+	persist.MysqlPersist(response, addr)
 }

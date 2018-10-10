@@ -9,7 +9,7 @@ import (
 	"fmt"
 )
 
-func Persisit(response *http.Response, url *url.URL) {
+func FilePersisit(response *http.Response, url *url.URL) {
 	html, err := ioutil.ReadAll(response.Body)
 	if err != nil {
 		panic(err)

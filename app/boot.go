@@ -6,13 +6,13 @@ import (
 	"bufio"
 	"path/filepath"
 	"net/url"
-	"gospider/fetch"
 	"gospider/model"
+	"gospider/fetch"
 )
 
 func loadUrl() {
 	pwd, _ := os.Getwd()
-	p := filepath.FromSlash(pwd+"/config/urls.txt")
+	p := filepath.FromSlash(pwd+"/resources/urls.txt")
 	file, err := os.Open(p)
 	if err != nil {
 		log.Fatal(err)
